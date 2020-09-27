@@ -72,19 +72,22 @@ def find_one(host='localhost', port=27017):
         db = cl.test_database
         print("database obj: {}".format(db))
         posts = db.posts
-        pprint.pprint(posts.find_one())
+        pprint.pprint(posts.find())
+
 
 
 def main():
-    # m.clear_collection(db_name='test_database', collection_name='posts')
-    use_context_function('first')
-    use_context_class('second')
-    use_context_class('third')
-    use_mongo_class('fourth')
-    print(bulk_sample().bulk_api_result)
-    find_one()
-    print("Exit")
+    m.clear_collection(db_name='movies', collection_name='movie_meta')
+    # use_context_function('first')
+    # use_context_class('second')
+    # use_context_class('third')
+    # use_mongo_class('fourth')
+    # print(bulk_sample().bulk_api_result)
+    # find_one()
+    # print("Exit")
 
 
 if __name__ == '__main__':
     main()
+
+# ORM - Object-relation mapping

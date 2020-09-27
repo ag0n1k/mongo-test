@@ -21,3 +21,4 @@ print(posts)
 post_ = posts.insert_one(post)
 
 pprint.pprint(posts.find_one())
+

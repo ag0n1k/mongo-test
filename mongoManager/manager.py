@@ -3,6 +3,9 @@ from contextlib import contextmanager
 from pymongo import InsertOne, DeleteMany, ReplaceOne, UpdateOne
 
 
+# with MongoManager(host, port) as cl:
+#   ...
+#
 class MongoManager(object):
     def __init__(self, host, port):
         print("Initialize the class context manager")
@@ -21,7 +24,7 @@ class MongoManagerInheritance(MongoClient):
     def __init__(self, host='localhost', port=27017):
         print("Initialize the Inheritance class context manager")
         super().__init__(host, port)
-    pass
+
 
 
 @contextmanager
